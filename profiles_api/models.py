@@ -20,11 +20,11 @@ class UserProfileManager(BaseUserManager):
         # hash password in the model
         # django does this by default with set_password function
         user.set_password(password)
-        user.save(using=self._db)
+        user.save(using=self._db) 
 
         return user
 
-    def create_super_user(self, email, name, password):
+    def create_superuser(self, email, name, password):
         """Create and save a new super user with given details."""
         user = self.create_user(email, name, password)
 
@@ -49,7 +49,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
     # Helps to work with django admin
     USERNAME_FIELD = "email"
-    REQUIRED_FILEDS = ["name"]
+    REQUIRED_FIELDS = ["name"]
 
     #UserProfile functions
     def get_full_name(self):
