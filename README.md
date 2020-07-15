@@ -1,12 +1,14 @@
 # Profiles REST API
 
-Profiles REST API course code.
+Profiles REST API code.
 
 
-
-
-OVERVIEW
+OVERVIEW:
 ---------
+
+
+NOTES:
+------
 
 /api/profile    --> list all the profiles with http get method.
                 --> create new profile with http post method.
